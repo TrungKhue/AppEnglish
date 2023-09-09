@@ -1,11 +1,8 @@
 import speech_recognition as sr
-
-# Sử dụng thư viện nhận dạng giọng nói để ghi âm và nhận dạng văn bản
 recognizer = sr.Recognizer()
 with sr.Microphone() as source:
     print("Nói một câu:")
     audio = recognizer.listen(source)
-
 try:
     spoken_text = recognizer.recognize_google(audio)
     print("You say: " + spoken_text)
